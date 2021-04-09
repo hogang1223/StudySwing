@@ -1,0 +1,54 @@
+package com.javalec.base;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+
+public class GUI00 {
+
+	private JFrame frmButtonTest;
+	private JButton login;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUI00 window = new GUI00();
+					window.frmButtonTest.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public GUI00() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmButtonTest = new JFrame();
+		frmButtonTest.setTitle("Button Test");
+		frmButtonTest.setBounds(100, 100, 450, 300);
+		frmButtonTest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmButtonTest.getContentPane().setLayout(null);
+		frmButtonTest.getContentPane().add(getLogin());
+	}
+	private JButton getLogin() {
+		if (login == null) {
+			login = new JButton("Login");
+			login.setBounds(168, 116, 117, 29);
+		}
+		return login;
+	}
+}
