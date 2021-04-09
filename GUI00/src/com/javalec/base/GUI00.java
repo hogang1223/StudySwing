@@ -14,7 +14,7 @@ public class GUI00 {
 
 	private JFrame frmButtonTest;
 	private JButton ok;
-	private JLabel lblNewLabel;
+	private JLabel lblTest;
 
 	/**
 	 * Launch the application.
@@ -49,7 +49,7 @@ public class GUI00 {
 		frmButtonTest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmButtonTest.getContentPane().setLayout(null);
 		frmButtonTest.getContentPane().add(getOk());
-		frmButtonTest.getContentPane().add(getLblNewLabel());
+		frmButtonTest.getContentPane().add(getLblTest());
 	}
 	private JButton getOk() {
 		if (ok == null) {
@@ -57,18 +57,19 @@ public class GUI00 {
 			ok.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
-					JOptionPane.showMessageDialog(null, "OK");
+					JOptionPane.showMessageDialog(null, "Message");
+					lblTest.setText("Button을 click 했습니다");
 				}
 			});
 			ok.setBounds(168, 116, 117, 29);
 		}
 		return ok;
 	}
-	private JLabel getLblNewLabel() {
-		if (lblNewLabel == null) {
-			lblNewLabel = new JLabel("Java Swing Button Test");
-			lblNewLabel.setBounds(29, 29, 181, 16);
+	private JLabel getLblTest() {
+		if (lblTest == null) {
+			lblTest = new JLabel("Java Swing Button Test");
+			lblTest.setBounds(29, 29, 181, 16);
 		}
-		return lblNewLabel;
+		return lblTest;
 	}
 }
