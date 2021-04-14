@@ -20,7 +20,6 @@ public class Excercise04 {
 	private JCheckBox chMul;
 	private JCheckBox chDiv;
 	private JLabel lblSol1;
-	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JLabel lblSol2;
 	private JLabel lblSol3;
 	private JLabel lblSol4;
